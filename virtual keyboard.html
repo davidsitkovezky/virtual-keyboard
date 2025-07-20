@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="2">
+    <title>virtual keyboard</title>
+    <!-- The CSS enters the game -->
+    <style>
+        html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40vh;
+            font-size: 30px;
+            margin: 0px;
+            background-color: #222121;
+        }
+
+        button {
+            font-size: 50px;
+            width: 60px;
+            height: 60px;
+            background-color: #121212;
+            color: #e0e0e0;
+            border-radius: 10px;
+            border: #424242 10px solid;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 2px 2px 4px #999999;
+            box-shadow: 4px 4px 8px #989898;
+            transform: scale(1);
+            line-height: 40px;
+            padding: 0px;
+            vertical-align: middle;
+            transition:
+                transform 0.3s ease;
+
+        }
+
+        h1 {
+            width: 490px;
+            font-size: large;
+            border-radius: 30px;
+            text-align: center;
+            background-color: #121212;
+            color: #e0e0e0;
+            border: #424242 10px solid;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 2px 2px 4px #999999;
+            box-shadow: 4px 4px 8px #989898;
+        }
+
+        p {
+            background-color: #121212;
+            color: #e0e0e0;
+            width: 250px;
+            border-radius: 30px;
+            text-align: center;
+            border: #424242 10px solid;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 2px 2px 4px #999999;
+            box-shadow: 4px 4px 8px #989898;
+        }
+
+        button:hover {
+            transform: scale(1.10);
+            transition:
+                transform 0.3s ease;
+        }
+
+        button:active {
+            transform: scale(0.9);
+            transition:
+                transform 0.1s ease-in;
+        }
+
+
+        .firstline {
+            position: absolute;
+            bottom: 230px;
+            left: 250px;
+        }
+
+        .secondline {
+            position: absolute;
+            bottom: 160px;
+            left: 280px;
+        }
+
+        .thirdline {
+            position: absolute;
+            bottom: 90px;
+            left: 330px;
+        }
+
+        #space {
+            position: absolute;
+            bottom: 20px;
+            width: 600px;
+            left: 300px;
+            height: 70px;
+            transform: scale(1);
+            transition:
+                transform 0.3s ease;
+        }
+
+        #space:hover {
+            transform: scale(1.05);
+            transition:
+                transform 0.3s ease;
+        }
+
+        #space:active {
+            transform: scale(0.95);
+            transition:
+                transform 0.3s ease;
+        }
+
+        #backspace {
+            position: absolute;
+            bottom: 300px;
+            right: 270px;
+            width: 100px;
+            line-height: 49px;
+            padding: 0px;
+        }
+        .numbers{
+            position:absolute;
+            bottom:300px;
+            left:230px;
+        }
+        .b1,.b2,.b3,.b4,.b5,.b6,.b7,.b8,.b9,.b0{
+            line-height:45px;
+        }
+
+    </style>
+</head>
+<!-- The HTML enters the game -->
+
+<body>
+    <h1>type something by using the virtual keyboard</h1>
+    <h1 id="h1"></h1>
+    <p>keyboard</p>
+    <div class="numbers">
+        <button class="b1" onclick="typeletter('1')">1</button>
+        <button class="b2" onclick="typeletter('2')">2</button>
+        <button class="b3" onclick="typeletter('3')">3</button>
+        <button class="b4" onclick="typeletter('4')">4</button>
+        <button class="b5" onclick="typeletter('5')">5</button>
+        <button class="b6" onclick="typeletter('6')">6</button>
+        <button class="b7" onclick="typeletter('7')">7</button>
+        <button class="b8" onclick="typeletter('8')">8</button>
+        <button class="b9" onclick="typeletter('9')">9</button>
+        <button class="b0" onclick="typeletter('0')">0</button>
+    </div>
+    <!-- The start of the first line of the keyboard -->
+    <div class="firstline">
+        <button id="q" onclick="typeletter('q')">q</button>
+        <button id="w" onclick="typeletter('w')">w</button>
+        <button id="e" onclick="typeletter('e')">e</button>
+        <button id="r" onclick="typeletter('r')">r</button>
+        <button id="t" onclick="typeletter('t')">t</button>
+        <button id="y" onclick="typeletter('y')">y</button>
+        <button id="u" onclick="typeletter('u')">u</button>
+        <button id="i" onclick="typeletter('i')">i</button>
+        <button id="o" onclick="typeletter('o')">o</button>
+        <button id="p" onclick="typeletter('p')">p</button><br>
+    </div>
+    <!-- The end of the first line of the keyboard -->
+    <!-- The start of the second line of the keyboard -->
+    <div class="secondline">
+        <button id="a" onclick="typeletter('a')">a</button>
+        <button id="s" onclick="typeletter('s')">s</button>
+        <button id="d" onclick="typeletter('d')">d</button>
+        <button id="f" onclick="typeletter('f')">f</button>
+        <button id="g" onclick="typeletter('g')">g</button>
+        <button id="h" onclick="typeletter('h')">h</button>
+        <button id="j" onclick="typeletter('j')">j</button>
+        <button id="k" onclick="typeletter('k')">k</button>
+        <button id="l" onclick="typeletter('l')">l</button><br>
+    </div>
+    <!-- The end of the second line of the keyboard -->
+    <!-- The start of the third line of the keyboard -->
+    <div class="thirdline">
+        <button id="z" onclick="typeletter('z')">z</button>
+        <button id="x" onclick="typeletter('x')">x</button>
+        <button id="c" onclick="typeletter('c')">c</button>
+        <button id="v" onclick="typeletter('v')">v</button>
+        <button id="b" onclick="typeletter('b')">b</button>
+        <button id="n" onclick="typeletter('n')">n</button>
+        <button id="m" onclick="typeletter('m')">m</button>
+    </div>
+    <!-- The end of the third line of the keyborad -->
+    <button id="space" onclick="typeletter(' ')"></button>
+    <button id="backspace" onclick="backspace()">⌫</button>
+
+    <!-- The javaScript enters the game -->
+    <script>
+        //adding the h1 element
+        const h1 = document.getElementById('h1')
+        function typeletter(letter) {
+            h1.textContent += letter;
+        };
+        function backspace() {
+            h1.textContent = h1.textContent.slice(0, -1);
+        }
+    </script>
+</body>
